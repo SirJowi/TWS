@@ -27,7 +27,7 @@ my_u = np.log(my_x2-x_02)-(sigma_u**2)/2
 # Transformation LNV -> SNV
 def SNV(x2):
     if x2 > x_02:
-        y = (np.log(x2 - x_02) - sigma_u) / my_u
+        y = (np.log(x2 - x_02) - my_u) / sigma_u
         val = norm.cdf(y)
     else:
         val = 0
